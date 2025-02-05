@@ -1,0 +1,25 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "description": "This is a Food ordering app",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "food",
+    "ordering",
+    "react"
+  ],
+  "author": "Kavya Naik",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
