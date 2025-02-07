@@ -38,7 +38,6 @@ const Body = () => {
             const filteredOnes = lisOfRestaurants.filter((restaurant) => {
               return restaurant.info.name.toLowerCase().includes(resToSearch.toLowerCase())
             })
-            console.log(filteredOnes)
             setfilteredListOfRestaurants(filteredOnes)
           }}> Search</button>
         </div>
