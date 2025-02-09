@@ -20,7 +20,7 @@ const RestaurantMenu = () => {
 
   return (
     <div className="p-2">
-      <h1 className="flex justify-center p-10">{restaurantData?.data?.cards[0]?.card?.card?.text}</h1>
+      <h1 className="flex justify-center p-10 font-extrabold">{restaurantData?.data?.cards[0]?.card?.card?.text}</h1>
       <div className="m-2">
       {restaurantCategory?.map((category) => {
         return (

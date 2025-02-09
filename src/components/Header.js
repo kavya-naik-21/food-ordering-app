@@ -7,7 +7,7 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="flex justify-between bg-gray-50 shadow-lg">
+    <div className="flex justify-between bg-gray-50 shadow-lg font-bold text-gray-500">
       <div className="logo-container">
         <img className="w-30" src={LOGO_URL}></img>
       </div>
@@ -30,7 +30,7 @@ const Header = () => {
           </li >
           <li className="p-4 hover:font-medium">
             <button
-              className="flex bg-rose-200 pl-1 pr-1 rounded-md" 
+              className="flex pl-1 pr-1 rounded-md" 
               onClick={() => {
                 btnName == "Login" ? setBtnName("Logout") : setBtnName("Login");
               }}

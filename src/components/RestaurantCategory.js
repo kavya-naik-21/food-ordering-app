@@ -13,10 +13,10 @@ const RestaurantCategory = (props) => {
     <div className="flex justify-center">
       <div className="m-3 w-200 bg-gray-100 rounded-2xl shadow-md">
         <div
-          className="flex justify-between cursor-pointer bg-gray-100 hover:bg-gray-200 p-5 rounded-2xl shadow-md"
+          className="flex justify-between cursor-pointer bg-gray-100 hover:bg-gray-200 p-5 rounded-2xl shadow-md font-bold text-gray-800"
           onClick={toggleAccordian}
         >
-          <span>{card.title}</span>
+          <span>{card.title + " (" + itemCards.length + ")"}</span>
           <span className="font-extrabold">{isMenuVisible ? "-" : "+"} </span>
         </div>
         {isMenuVisible &&
