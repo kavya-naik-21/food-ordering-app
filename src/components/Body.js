@@ -30,7 +30,6 @@ const Body = () => {
     setfilteredListOfRestaurants(
       jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
-    console.log(jsonData.data.cards);
   };
   if (!onlineStatus) {
     return <h1> oops you are offline</h1>;
