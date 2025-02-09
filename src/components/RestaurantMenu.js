@@ -1,27 +1,33 @@
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const restaurantData = useRestaurantMenu(resId);
 
-  const restaurantMenu =
-    restaurantData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-      ?.card?.itemCards;
+  console.log(restaurantData);
+  const restaurantCategory =
+    restaurantData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+      (category) => {
+        return (
+          category?.card?.card?.["@type"] ===
+          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+        );
+      }
+    );
+
   return (
-    <div className="restaurant-menu">
-      <h1>restaurant name</h1>
-      <h3>
-        {restaurantMenu?.map((item) => {
-          return (
-            <li key={item.card.info.id}>
-              {item.card.info.name} : Rs.{" "}
-              {item.card.info.defaultPrice / 100 || item.card.info.price / 100}
-            </li>
-          );
-        })}
-      </h3>
+    <div className="p-2">
+      <h1 className="flex justify-center p-10">{restaurantData?.data?.cards[0]?.card?.card?.text}</h1>
+      <div className="m-2">
+      {restaurantCategory?.map((category) => {
+        return (
+            <RestaurantCategory key={category.card.card.categoryId} category={category} />
+        );
+      })}
+      </div>
     </div>
   );
 };
