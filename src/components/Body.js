@@ -30,9 +30,7 @@ const Body = () => {
     setfilteredListOfRestaurants(
       jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
-    console.log(
-      jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
-    );
+    console.log(jsonData.data.cards);
   };
   if (!onlineStatus) {
     return <h1> oops you are offline</h1>;
@@ -86,8 +84,8 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurant/" + restaurant.info.id}
           >
-            {/** if restaurant has aggregatedDiscountInfoV2 then display it, using higherOrder Component*/}
-            {restaurant.info.aggregatedDiscountInfoV2 ? (
+            {/** if restaurant has aggregatedDiscountInfoV3 then display it, using higherOrder Component*/}
+            {restaurant.info.aggregatedDiscountInfoV3 ? (
               <RestaurantCardWithDiscountInfo resData={restaurant} />
             ) : (
               <RestaurantCard resData={restaurant} />
