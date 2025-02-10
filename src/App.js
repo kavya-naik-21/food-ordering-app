@@ -8,6 +8,8 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Error from "./components/Error";
 import UserContext from "./utils/UserContext";
 import Cart from "./components/Cart";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const About = lazy(() => import("./components/About"));
 const AppLayout = () => {
@@ -20,12 +22,14 @@ const AppLayout = () => {
   })
 
   return (
+    <Provider store={appStore}>
     <UserContext.Provider value={{loggedInUser: userName}}>
     <div className="app">
       <Header />
       <Outlet />
     </div>
     </UserContext.Provider>
+    </Provider>
   );
 };
 
