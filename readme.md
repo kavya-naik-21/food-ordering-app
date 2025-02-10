@@ -32,11 +32,11 @@ This is a modern food ordering web application built using React and Redux, leve
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/food-ordering-app.git
+   git clone https://github.com/yourusername/rapidEats-food-ordering-app.git
    ```
 2. Navigate to the project directory:
    ```sh
-   cd food-ordering-app
+   cd rapidEats-food-ordering-app
    ```
 3. Install dependencies:
    ```sh
