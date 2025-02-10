@@ -1,4 +1,4 @@
-# Food Ordering App
+# RapidEats - Food Ordering App
 
 ## Overview
 This is a modern food ordering web application built using React and Redux, leveraging the Swiggy APIs for restaurant and menu data. It also integrates GitHub User API for profile handling and uses Parcel as the bundler for fast and efficient builds. The project follows best practices in UI design with TailwindCSS and ensures code reliability through React Testing Library.
